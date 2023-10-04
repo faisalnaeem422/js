@@ -51,3 +51,29 @@ console.log(`data type of scorevalue ${typeof(scoreValue)}`)
 //Is javascript is dynamic type language or static type language?
     //javascript is dynamic type language
     //Typescript is static language
+
+//================================== *** =====================================
+//Memory
+    //Two types of memory 
+        //1. Stack
+        //In primitive data type stack memory is used (you will get copy of the original value)
+        let youtubeName = "YourYoutubeChannelName";
+        let anotherName = youtubeName;
+        anotherName = "chaiaurcode";
+        console.log(youtubeName);
+        console.log(anotherName);
+
+       
+        //2. Heap
+        //In non primitive or reference type Heap memory is used (you will get reference of the original value)
+        let userOne={
+            email:"user@gmail.com",
+            username:"userOne"
+        }
+
+        let userTwo = userOne
+
+        userTwo.email = "Faisal@google.com"
+
+        console.log(userOne.email);
+        console.log(userTwo.email);
