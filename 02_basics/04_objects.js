@@ -50,11 +50,28 @@ const users = [
     }
 ]
 
-console.log(users[1].email);
+// console.log(users[1].email);
 
 // console.log(tinderUser);
 
 // console.log(Object.keys(tinderUser));
 // console.log(Object.values(tinderUser));
 // console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+//========================  Destructure =====================
+
+
+const course ={
+    courseName:"JS in Hindi",
+    price:"999",
+    courseInstructor:"Hitesh"
+}
+
+course.courseInstructor;
+
+const {courseName , price , courseInstructor:instructor} = course
+
+console.log(instructor);
+
