@@ -1,7 +1,7 @@
 //singleton
+//creating by constructor
 
-//object literals
-
+//object literals (creating with literals are not singleton)
 const mySymbol = Symbol("Key1")
 
 const jsUser={
