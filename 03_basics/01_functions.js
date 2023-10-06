@@ -34,13 +34,47 @@
 
 //================ login user =====================
 
-function loginUserMessage(username){
-    if(!username){
-        console.log("Please enter username");
-        return
-    }
-    return `${username} just logged in`
-}
+// function loginUserMessage(username = "Faisal"){
+//     if(!username){
+//         console.log("Please enter username");
+//         return
+//     }
+//     return `${username} just logged in`
+// }
 
 // console.log(loginUserMessage("Faisal"))
-console.log(loginUserMessage())
+// console.log(loginUserMessage("Naeem"))
+
+//if you have multiple values but have no idea
+//in this case you have to use rest operator to get all values given in the argument 
+function calculateCartPrice(...item){
+    return item
+}
+
+// console.log(calculateCartPrice(200,300,4000,5000));
+
+const user ={
+    name:"Faisal",
+    age:25
+}
+
+function handleObject(anyObject){
+   console.log(`Username is ${anyObject.name} and age is ${anyObject.age}`) 
+    return
+}
+// handleObject(user)
+//  handleObject({
+//     name:"Naeem",
+//     age:20
+//  })
+
+
+const myNewArray =[200,400,100,600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+// console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([
+    200,300,500
+]))
