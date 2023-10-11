@@ -2,10 +2,9 @@
 for (let i = 0; i < 10; i++) {
     const element = i;
     if(element==5){
-        console.log("5 is best number")
+        // console.log("5 is best number")
     }
-    console.log(element)
-    
+    // console.log(element) 
 }
 
 
@@ -25,3 +24,25 @@ for (let index = 0; index < myArray.length; index++) {
     // console.log(element);
 }
 
+
+//Break and continue
+//using break  when your condition match it will jump out from the loop
+for (let index = 0; index <= 20; index++) {
+    if(index==5){
+        // console.log(`Detected 5`)
+        break;
+    }
+    // console.log(`Value of index i s ${index}`);
+
+}
+
+
+//Continue
+//Using continue when your condition match it will skip that value but does not jump out from the loop
+for (let index = 0; index <=20; index++) {
+    if(index==5){
+        console.log(`Detected 5`);
+        continue
+    }
+    console.log(`value of index is ${index}`)   
+}
