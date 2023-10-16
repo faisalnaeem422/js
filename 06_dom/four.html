@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Final Exercise</title>
+  </head>
+  <body>
+    <ul class="languages">
+      <li>Javascript</li>
+      <li>Typescript</li>
+      <li>Jquery</li>
+      <li>Reactjs</li>
+    </ul>
+  </body>
+
+  <script>
+    const addLanguage = (langName) => {
+      const newListItem = document.createElement("li");
+      newListItem.innerHTML = `${langName}`;
+
+      document.querySelector(".languages").appendChild(newListItem);
+    };
+
+    // addLanguage("TypeScript");
+    // addLanguage("Pyhton");
+
+    //Add item to DOM
+    const addOpptiLanguage = (langName) => {
+      const newListItem = document.createElement("li");
+      newListItem.appendChild(document.createTextNode(langName));
+      document.querySelector(".languages").appendChild(newListItem);
+    };
+
+    // addOpptiLanguage("Reactjs");
+    //Edit item to DOM
+    const secondItem = document.querySelector("li:nth-child(2)");
+    const newLi  = document.createElement('li');
+    newLi.textContent = "Mojo";
+    secondItem.replaceWith(newLi);
+
+
+    //Replace with first child
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    //Remove last child
+
+    const  lsatLang = document.querySelector("li:last-child");
+    lsatLang.remove()
+  </script>
+</html>
