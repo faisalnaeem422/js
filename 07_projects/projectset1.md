@@ -207,3 +207,32 @@ document.querySelector('#start').addEventListener('click', startChangingColor);
 document.querySelector('#stop').addEventListener('click', stopChangingColor);
 
  ```
+
+ ## Project 6 Solution Code
+### find key and key code pressed on the keyboard
+```javascript
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', function (e) {
+  insert.innerHTML = `
+<div class='color'>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Key Code</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${e.key === ' ' ? 'Space' : e.key}</td>
+<td>${e.keyCode}</td>
+<td>${e.code}</td>
+</tr>
+</tbody>
+</table>
+</div>
+`;
+});
+```
