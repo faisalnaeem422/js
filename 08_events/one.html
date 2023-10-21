@@ -95,5 +95,21 @@
     //   console.log("Google clicked");
     // },false)
 
+    
+     //Hide image which is clicked (project)
+
+     document.querySelector("#images").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeImage = e.target.parentNode;
+          removeImage.remove();
+        }
+      },
+      false
+    );
+
   </script>
 </html>
