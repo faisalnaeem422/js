@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Chai aur Code</h1>
     <button id="stop">Stop</button>
-</body>
-<script>
+  </body>
+  <script>
 
-setTimeOut(function(){
-    console.log("Faisal")
-},2000)
+    //change text of h1 using setTimeout function
+    const changeText = ()=>{
+        document.querySelector("h1").innerHTML = "Hitesh Choudhary is the best teacher."
+    }
 
-</script>
+    const changeInner = setTimeout(changeText,2000)
+
+    // exapmple function for setTimeout
+    const greetings = () => {
+      console.log("Welcome Faisal");
+    };
+
+    setTimeout(greetings, 2000);
+
+    //Clear Timeout Interval 
+    document.querySelector('#stop').addEventListener('click',function() {
+        clearTimeout(changeInner);
+        console.log("Change text functio has been stopped");
+    })
+
+  </script>
 </html>
